@@ -18,7 +18,7 @@ csvData.then(function(gamedata){
 
   var ScaleR = d3.scaleSqrt()
                  .domain([0, d3.max(gamedata, function(d){ return d.Rank; })])
-                 .range([20, 30]);
+                 .range([20, 40]);
 
   var ScaleX = d3.scaleLinear()
                  .domain([0, d3.max(gamedata, function(d){ return d.Rank; })])
