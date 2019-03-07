@@ -38,7 +38,7 @@ csvData.then(function(gamedata){
 
   var ScaleFont = d3.scaleLinear()
                     .domain([d3.min(gamedata, function(d){ return d.Name.length; }), d3.max(gamedata, function(d){ return d.Name.length; })])
-                    .range([12, 5]);
+                    .range([7, 4]);
 
   var xAxis = d3.axisBottom(ScaleX)
                 .ticks(d3.max(gamedata, function(d){ return d.Rank; }))
@@ -115,7 +115,7 @@ csvData.then(function(gamedata){
      .style('font-size', '16px')
      .attr('stroke', 'violet')
      .attr('fill', 'purple');
-     
+
 }, function(error){
   console.log(error);
 })
